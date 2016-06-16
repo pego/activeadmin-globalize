@@ -1,13 +1,11 @@
 $ ->
-
   translations = ->
-
     $(".activeadmin-translations > ul").each ->
       $dom = $(this)
       if !$dom.data("ready")
         $dom.data("ready", true)
         $tabs = $("li > a", this)
-        $contents = $(this).siblings("fieldset")
+        $contents = $(this).siblings("fieldset, .translated_attributes")
 
         $tabs.click ->
           $tab = $(this)
@@ -33,4 +31,3 @@ $ ->
     )
 
   translations()
-

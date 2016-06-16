@@ -14,7 +14,7 @@ module ActiveAdmin
           html = "".html_safe
         end
 
-        html << template.content_tag(:div, class: "activeadmin-translations") do
+        html << template.content_tag(:div, class: "activeadmin-translations activeadmin-translations-form") do
           template.content_tag(:ul, class: "available-locales") do
             (auto_sort ? I18n.available_locales.sort : I18n.available_locales).map do |locale|
               template.content_tag(:li) do
@@ -48,4 +48,3 @@ module ActiveAdmin
     end
   end
 end
-
